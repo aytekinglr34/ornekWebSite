@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="tarih"></div>
+    <script>
+      let div = document.querySelector(".tarih");
+
+      setInterval(() => {
+        let date = new Date();
+        let yil = date.getFullYear();
+        let ay = date.getMonth();
+        let gun = date.getDay();
+        let saat = date.getHours();
+        let dakika = date.getMinutes();
+        let saniye = date.getSeconds();
+        let miliSaniye = date.getMilliseconds();
+
+        div.innerHTML = `
+          Yıl : ${yil}<br>Ay : ${ay}<br>Gün : ${gun}<br>Saat : ${saat}<br>Dakika : ${dakika}<br>Saniye : ${saniye}<br>Mili Saniye : ${miliSaniye}<br>
+        `;
+      }, 1);
+    </script>
+  </body>
+</html>
